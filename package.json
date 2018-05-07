@@ -1,0 +1,22 @@
+{
+  "name": "inflationdeflationerc20",
+  "version": "1.0.0",
+  "description": "ethereum erc20 token that inflates and deflates supply by constantly changing account balances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatsyourgithub/inflationdeflationerc20.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/whatsyourgithub/inflationdeflationerc20/issues"
+  },
+  "homepage": "https://github.com/whatsyourgithub/inflationdeflationerc20#readme",
+  "dependencies": {
+    "solc": "^0.4.23"
+  }
+}
