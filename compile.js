@@ -1,4 +1,4 @@
-// simple script to compile all solidity files in contracts dir
+// simple script to compile all solidity files in contracts dir and write abis and bytecodes to build dir
 
 var solc = require('solc');
 var fs = require('fs');
@@ -30,8 +30,12 @@ var dirFunction = (dir) => {
     walk(dir, fileFunction, dirFunction);
 };
 
+console.log('Reading contracts...');
+
 // walk contracts dir
 walk('./contracts', fileFunction, dirFunction);
+
+console.log('Compiling...');
 
 // compile with optimization enabled
 var output = solc.compile({ sources: input }, 1);

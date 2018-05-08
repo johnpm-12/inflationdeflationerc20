@@ -1,7 +1,7 @@
 pragma solidity ^0.4.23;
 
 // prevent a contract from being an ERC20 sink by allowing a manager to transfer any ERC20 token from the contract
-// if used on contracts that are supposed to hold ERC20 balances by design, override the notRequiredToken modifier to revert so the manager can't steal funds
+// if used on contracts that hold ERC20 balances by design, override the notRequiredToken modifier to revert so the manager can't steal funds
 
 import "./Managed.sol";
 import "./ERC20Interface.sol";

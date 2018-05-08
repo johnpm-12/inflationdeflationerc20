@@ -1,6 +1,8 @@
 pragma solidity ^0.4.23;
 
 // safemath for signed and unsigned ints, divide is unnecessary because EVM already throws when dividing by 0
+// change functions to public instead of internal to use as a deployed library instead of inlining bytecode
+// change library to contract to inherit it
 
 library SafeMath {
 

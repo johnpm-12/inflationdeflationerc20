@@ -16,18 +16,13 @@ contract Managed {
         _;
     }
 
-    modifier newManagerOnly() {
+    function transferManager(address _newManager) public managerOnly {
+        newManager = _newManager;
+    }
+
+    function acceptManager() public {
         require(msg.sender == newManager);
-        _;
-    }
-
-    function setManager(address _manager) public managerOnly {
-        newManager = _manager;
-    }
-
-    function acceptManager() public newManagerOnly {
         manager = newManager;
-        newManager = 0x0;
     }
 
 }
